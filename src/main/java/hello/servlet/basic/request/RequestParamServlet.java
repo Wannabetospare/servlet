@@ -14,6 +14,8 @@ import java.io.IOException;
  * 2. 동일한 파라미터 전송 가능
  * http://localhost:8080/request-param?username=hello&username=kim&age=20
  */
+// 웹 서블릿 어노테이션 - 이름, url 주소 설정
+// 쿼리 파라미터를 사용해서 GET요청을 보내는 방버 - url 주소에 정보를 넣어서 이용해서 요청하는 방법
 @WebServlet(name = "requestParamServlet", urlPatterns = "/request-param")
 public class RequestParamServlet extends HttpServlet {
     @Override
@@ -43,6 +45,7 @@ public class RequestParamServlet extends HttpServlet {
             System.out.println("username = " + name);
         }
 
+        // 응답 메세지간단하게
         response.getWriter().write("ok");
 
     }
