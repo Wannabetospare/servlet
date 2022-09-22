@@ -13,6 +13,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+
+// 서블릿 방식 - 회원 리스트 - HTML 코드를 문자로 자바 클래스 안에 집어넣는다.
+
 @WebServlet(name = "memberListServlet", urlPatterns = "/servlet/members")
 public class MemberListServlet extends HttpServlet {
 

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ahnhyunkyu
-  Date: 2022/09/22
-  Time: 3:53 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -18,3 +11,7 @@
 </form>
 </body>
 </html>
+
+<%--
+JSP - 이 파일 하나로 멤버 폼을 HTML로 열면서 동적인 데이터전송까지 끝냄-
+-%>
