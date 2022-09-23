@@ -1,0 +1,41 @@
+package hello.servlet.web.frontcontroller.v2.controller;
+
+import hello.servlet.domain.member.Member;
+import hello.servlet.domain.member.MemberRepository;
+import hello.servlet.web.frontcontroller.MyView;
+import hello.servlet.web.frontcontroller.v2.ControllerV2;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+
+public class MemberListControllerV2 implements ControllerV2 {
+
+
+    private MemberRepository memberRepository = MemberRepository.getInstance();
+
+    @Override
+    public MyView process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
+
+        List<Member> members = memberRepository.findAll();
+
+        /*
+           Model에 데이터를 보관한다.
+           HttpServletRequest를 Model로 사용한다.
+           request가 제공하는 setAttribute() 를 사용하면 request 객체에 데이터를 보관해서 뷰에 전달할 수 있다.
+           뷰는 request.getAttribute() 를 사용해서 데이터를 꺼내면 된다.
+         */
+        request.setAttribute("members", members);
+
+
+        // MyView 객체를 만들어서 주소값을 넣고 반환한다.
+        return new MyView("/WEB-INF/views/members.jsp");
+    }
+
+}
+
