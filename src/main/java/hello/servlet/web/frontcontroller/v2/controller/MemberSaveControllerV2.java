@@ -18,7 +18,7 @@ public class MemberSaveControllerV2 implements ControllerV2 {
     @Override
     public MyView process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // request 에서 파라미터를 가져온후 초기화 해준다.
+        // request 에서 파라미터를 가져온후  초기화 해준다.
         String username = request.getParameter("username");
         int age = Integer.parseInt(request.getParameter("age"));
 
