@@ -12,3 +12,13 @@
 <a href="/index.html">메인</a>
 </body>
 </html>
+
+
+<%--
+
+<%= request.getAttribute("member")%> 로 모델에 저장한 member 객체를 꺼낼 수 있지만, 너무 복잡해진다.
+JSP는 ${} 문법을 제공하는데, 이 문법을 사용하면 request의 attribute에 담긴 데이터를 편리하게 조회할 수 있다.
+
+--%>
+
+

@@ -37,7 +37,7 @@ public class MemberSaveControllerV2 implements ControllerV2 {
         request.setAttribute("member", member);
 
 
-        // MyView 객체를 만들어서 주소값을 넣고 반환한다.
+        // MyView 객체를 만들어서 주소값을 넣고 반환한다. (데이터를 운반하고 렌더링하는 일은 Myview 의 render 가 해준다.)
         return new MyView("/WEB-INF/views/save-result.jsp");
     }
 }

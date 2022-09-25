@@ -12,6 +12,8 @@ import java.io.IOException;
 // 회원등록 컨트롤러
 public class MemberFormControllerV1 implements ControllerV1 {
 
+
+    // ContollerV1 에서 상속받은 메서드를 구현하여 사용하는 메서드 부
     @Override
     public void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

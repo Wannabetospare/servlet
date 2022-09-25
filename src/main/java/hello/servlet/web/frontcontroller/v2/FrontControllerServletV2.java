@@ -35,17 +35,25 @@ public class FrontControllerServletV2 extends HttpServlet {
 
         String requestURI = request.getRequestURI();
 
+
+        // MyView 객체를 만들고, 컨트롤에서 만들어진 요청과 응답을 받는다. 그 후 만든 객체를 렌더링한다.
+        // 만약 URI 주소로 /front-controller/v1/members/new-form를 받는다면, controllerMap 에서 value 로 new MemberFormControllerV1 를 받고
+        // 만약 값이 없다면 404 오류를 띄우고, 있다면 MemberFormControllerV1.process 메서드를 실행하고 MyView 형을 반환한다.
+        // 반환한 MyView 의 render 메서드를 실행한다.
+
         ControllerV2 controller = controllerMap.get(requestURI);
         if (controller == null){
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
 
-
-        // MyView 객체를 만들고, 컨트롤에서 만들어진 요청과 응답을 받는다. 그 후 만든 객체를 렌더링한다.
         MyView view = controller.process(request, response);
         view.render(request, response);
-
-
     }
 }
+
+/*
+    ControllerV2의 반환 타입이 MyView 이므로 프론트 컨트롤러는 컨트롤러의 호출 결과로 MyView 를 반환 받는다.
+    그리고 view.render() 를 호출하면 forward 로직을 수행해서 JSP가 실행된다.
+ */
+

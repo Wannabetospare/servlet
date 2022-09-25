@@ -12,6 +12,9 @@ import java.io.IOException;
 
 public interface ControllerV1  {
 
+
+    // 인터페이스의 메서드로 이 메서드를 사용해 구현 클래스에서 Override를 하여 사용한다.
+    // 반환 타입 x
     void process(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException;
 

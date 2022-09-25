@@ -12,10 +12,11 @@ import java.io.IOException;
 
 public class MemberSaveControllerV1 implements ControllerV1 {
 
-
+    // 회원 저장소 선언 (싱글톤)
     private MemberRepository memberRepository = MemberRepository.getInstance();
 
 
+    // ContollerV1 에서 상속받은 메서드를 구현하여 사용하는 메서드 부
     @Override
     public void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
