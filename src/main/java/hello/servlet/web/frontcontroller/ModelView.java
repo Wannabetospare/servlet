@@ -13,6 +13,8 @@ public class ModelView {
     private String viewName;
     private Map<String, Object> model = new HashMap<>();
 
+
+    // 생성자
     public ModelView(String viewName) {
 
         this.viewName = viewName;

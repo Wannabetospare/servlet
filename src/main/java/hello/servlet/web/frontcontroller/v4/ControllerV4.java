@@ -13,3 +13,6 @@ public interface ControllerV4 {
     String process(Map<String, String> paraMap, Map<String, Object> model);
 
 }
+
+
+// 여기서 paraMap, model  전부 만듬

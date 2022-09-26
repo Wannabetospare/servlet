@@ -8,6 +8,8 @@ public class MemberFormControllerV4 implements ControllerV4 {
 
     @Override
     public String process(Map<String, String> paraMap, Map<String, Object> model) {
+
         return "new-form";
+        
     }
 }

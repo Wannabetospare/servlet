@@ -29,14 +29,15 @@ import java.util.Map;
 public class FrontControllerServletV5 extends HttpServlet {
 
 
+    //매핑 정보의 값이 ControllerV3 , ControllerV4 같은 인터페이스에서 아무 값이나 받을 수 있는 Object 로 변경되었다.
     private final Map<String, Object> handlerMappingMap = new HashMap<>();
     private final List<MyHandlerAdapter> handlerAdapters = new ArrayList<>();
 
 
     public FrontControllerServletV5() {
 
-        initHandlerMappingMap();
-        initHandlerAdapters();
+        initHandlerMappingMap(); // 핸들러 매핑 초기화
+        initHandlerAdapters();  // 어댑터 초기화
 
     }
 
