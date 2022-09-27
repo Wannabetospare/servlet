@@ -36,9 +36,7 @@ public class SpringMemberControllerV3 {
         // @RequestMapping(value = "/save", method = RequestMethod.POST) == @PostMapping("/save")
         @PostMapping("/save")
         public String save(
-                @RequestParam("username") String username,
-                @RequestParam("age") int age,
-                Model model) {
+                @RequestParam("username") String username, @RequestParam("age") int age, Model model) {
                 Member member = new Member(username, age);
                 memberRepository.save(member);
                 model.addAttribute("member", member);
